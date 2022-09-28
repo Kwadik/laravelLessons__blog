@@ -31,6 +31,8 @@ php artisan make:controller Main/IndexController --invokable
 
 ## Laravel создание Блога 5. Определяемся со стратегией и создаем задел для CRUD категорий
 
-## 
+## Laravel создание Блога 6. Страница создания категории (форма создания)
+
+
 
 
