@@ -27,6 +27,8 @@ php artisan migrate
 
 php artisan make:controller Main/IndexController --invokable
 
+## Laravel создание Блога 4. Ставим фронт админки, установка Admin Lte
 
+## Laravel создание Блога 5. Определяемся со стратегией и создаем задел для CRUD категорий
 
 

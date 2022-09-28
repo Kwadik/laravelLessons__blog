@@ -21,4 +21,12 @@ Route::group([
     Route::get('/', 'IndexController');
 });
 
+Route::group([
+    'namespace' => 'App\Http\Controllers\Admin\Main',
+    'prefix' => 'admin',
+], function () {
+
+    Route::get('/', 'IndexController');
+});
+
 Auth::routes();
