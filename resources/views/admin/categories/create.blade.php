@@ -25,7 +25,7 @@
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
                     <div class="col-12">
-                        <form action="{{ route('admin.store.index') }}" method="POST" class="w-25">
+                        <form action="{{ route('admin.category.store') }}" method="POST" class="w-25">
                             @csrf
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email address</label>

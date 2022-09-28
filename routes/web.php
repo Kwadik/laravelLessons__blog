@@ -39,8 +39,9 @@ Route::group([
     ], function () {
 
         Route::get('/', 'IndexController')->name('admin.category.index');
-        Route::get('/create', 'CreateController')->name('admin.create.index');
-        Route::post('/', 'StoreController')->name('admin.store.index');
+        Route::get('/create', 'CreateController')->name('admin.category.create');
+        Route::get('/{category}', 'ShowController')->name('admin.category.show');
+        Route::post('/', 'StoreController')->name('admin.category.store');
     });
 });
 
