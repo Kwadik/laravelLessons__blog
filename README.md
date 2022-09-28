@@ -23,8 +23,10 @@ php artisan migrate
 
 ## Laravel создание Блога 3. Подгружаем фронт страницы блога. Список постов
 
-!!! нет свойства namespace в RouteServiceProvider - пропустил пока
+!!! нет свойства namespace в RouteServiceProvider - пропустил пока<br>resolved: 'namespace' => 'App\Http\Controllers\Main'
 
-php artisan make:controller Main/IndexController
+php artisan make:controller Main/IndexController --invokable
+
+
 
 
