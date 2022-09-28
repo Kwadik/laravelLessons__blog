@@ -39,4 +39,6 @@ php artisan make:request Admin/Category/StoreRequest
 
 composer require doctrine/dbal (нужно для некоторых операций с бд)
 
+## Laravel создание Блога 8. Получение списка категорий
+
 
