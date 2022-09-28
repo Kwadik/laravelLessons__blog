@@ -33,6 +33,10 @@ php artisan make:controller Main/IndexController --invokable
 
 ## Laravel создание Блога 6. Страница создания категории (форма создания)
 
+## Laravel создание Блога 7. Добавление категории. Первая категория
 
+php artisan make:request Admin/Category/StoreRequest
+
+composer require doctrine/dbal (нужно для некоторых операций с бд)
 
 

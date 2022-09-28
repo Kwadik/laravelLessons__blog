@@ -40,6 +40,7 @@ Route::group([
 
         Route::get('/', 'IndexController')->name('admin.category.index');
         Route::get('/create', 'CreateController')->name('admin.create.index');
+        Route::post('/', 'StoreController')->name('admin.store.index');
     });
 });
 

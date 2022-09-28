@@ -25,10 +25,14 @@
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
                     <div class="col-12">
-                        <form action="#" class="w-25">
+                        <form action="{{ route('admin.store.index') }}" method="POST" class="w-25">
+                            @csrf
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="название категории">
+                                <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="название категории">
+                                @error('title')
+                                <div class="text-danger">Это поле необходимо для заполнения</div>
+                                @enderror
                             </div>
                             <input type="submit" value="Добавить" class="btn btn-primary">
                         </form>
