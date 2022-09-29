@@ -49,4 +49,8 @@ composer require doctrine/dbal (нужно для некоторых опера�
 
 php artisan make:migration add_column_soft_deletes_to_categories_table
 
+## Laravel создание Блога 13. Полностью добавляем CRUD для тегов
+
+php artisan make:migration add_column_soft_deletes_to_tags_table
+
 

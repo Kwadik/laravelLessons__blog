@@ -6,11 +6,11 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6 d-flex align-items-center">
-                        <h1 class="m-0">{{ $category->title }}</h1>
-                        <a href="{{ route('admin.category.edit', $category->id) }}" class="text-success ml-2">
+                        <h1 class="m-0">{{ $tag->title }}</h1>
+                        <a href="{{ route('admin.tag.edit', $tag->id) }}" class="text-success ml-2">
                             <i class="fas fa-pencil-alt"></i>
                         </a>
-                        <form action="{{ route('admin.category.delete', $category->id) }}" method="POST" class="ml-2">
+                        <form action="{{ route('admin.tag.delete', $tag->id) }}" method="POST" class="ml-2">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="border-0 bg-transparent">
@@ -41,11 +41,11 @@
                                     <tbody>
                                     <tr>
                                         <td>ID</td>
-                                        <td>{{ $category->id }}</td>
+                                        <td>{{ $tag->id }}</td>
                                     </tr>
                                     <tr>
                                         <td>Название</td>
-                                        <td>{{ $category->title }}</td>
+                                        <td>{{ $tag->title }}</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="row">
                     <div class="col-1 mb-3">
-                        <a href="{{ route('admin.category.edit', $category->id) }}" type="button" class="btn btn-block btn-primary">Редактировать</a>
+                        <a href="{{ route('admin.tag.edit', $tag->id) }}" type="button" class="btn btn-block btn-primary">Редактировать</a>
                     </div>
                 </div>
                 <!-- /.row -->
