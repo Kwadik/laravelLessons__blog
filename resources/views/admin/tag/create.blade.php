@@ -28,7 +28,7 @@
                         <form action="{{ route('admin.tag.store') }}" method="POST" class="w-25">
                             @csrf
                             <div class="form-group">
-                                <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="название тега">
+                                <input type="text" name="title" class="form-control" placeholder="название тега">
                                 @error('title')
                                 <div class="text-danger">Это поле необходимо для заполнения</div>
                                 @enderror

@@ -29,8 +29,8 @@
                             @csrf
                             @method('PATCH')
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="text" name="title" class="form-control" id="exampleInputEmail1" value="{{ $category->title }}" placeholder="название категории">
+                                <label>Email address</label>
+                                <input type="text" name="title" class="form-control" value="{{ $category->title }}" placeholder="название категории">
                                 @error('title')
                                 <div class="text-danger">Это поле необходимо для заполнения</div>
                                 @enderror

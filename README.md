@@ -76,4 +76,8 @@ php artisan storage:link<br>
 
 ## Laravel создание Блога 23. Полностью добавляем основу CRUDа для пользователей (неполная реализация)
 
+## Laravel создание Блога 24. Полностью дорабатываем CRUD для пользователей
+
+php artisan make:migration add_soft_deletes_for_users_table
+
 

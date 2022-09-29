@@ -28,8 +28,8 @@
                         <form action="{{ route('admin.category.store') }}" method="POST" class="w-25">
                             @csrf
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="название категории">
+                                <label>Email address</label>
+                                <input type="text" name="title" class="form-control" placeholder="название категории">
                                 @error('title')
                                 <div class="text-danger">Это поле необходимо для заполнения</div>
                                 @enderror

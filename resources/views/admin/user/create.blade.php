@@ -28,9 +28,21 @@
                         <form action="{{ route('admin.user.store') }}" method="POST" class="w-25">
                             @csrf
                             <div class="form-group">
-                                <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="имя пользователя">
+                                <input type="text" name="email" value="{{ old('email') }}" class="form-control" placeholder="Email">
+                                @error('email')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="name" value="{{ old('name') }}" class="form-control" placeholder="имя пользователя">
                                 @error('name')
-                                <div class="text-danger">Это поле необходимо для заполнения</div>
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="password" value="{{ old('password') }}" class="form-control" placeholder="пароль пользователя">
+                                @error('password')
+                                <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <input type="submit" value="Добавить" class="btn btn-primary">
