@@ -53,4 +53,6 @@ php artisan make:migration add_column_soft_deletes_to_categories_table
 
 php artisan make:migration add_column_soft_deletes_to_tags_table
 
+## Laravel создание Блога 14. Полностью добавляем основу CRUDа для постов (неполная реализация)
+
 
