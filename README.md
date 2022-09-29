@@ -69,3 +69,4 @@ php artisan storage:link<br>
 перелинковка папок с картинками storage в public
 
 ## Laravel создание Блога 20. Удаление постов, используем soft delete, казус удаления колонки sqlite
+
