@@ -19,8 +19,13 @@
     <link rel="stylesheet" href="{{ asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
     <!-- Daterange picker -->
     <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css') }}">
+    <style>
+        .blog-project .custom-file-input ~ .custom-file-label::after {
+            content: 'Выбрать файл';
+        }
+    </style>
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="blog-project hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
     <!-- Preloader -->

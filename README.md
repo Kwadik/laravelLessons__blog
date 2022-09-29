@@ -59,4 +59,6 @@ php artisan make:migration add_column_soft_deletes_to_tags_table
 
 artisan make:migration add_columns_for_images_to_posts_table
 
+## Laravel создание Блога 17. Добавляем возможность привязывать пост к категории
+
 

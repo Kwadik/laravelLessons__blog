@@ -44,24 +44,40 @@
                                 <div class="input-group">
                                     <div class="custom-file">
                                         <input type="file" name="preview_image" class="custom-file-input">
-                                        <label class="custom-file-label">Выбрать файл</label>
+                                        <label class="custom-file-label">Изображение не выбрано</label>
                                     </div>
                                     <div class="input-group-append">
                                         <span class="input-group-text">Добавить</span>
                                     </div>
                                 </div>
+                                @error('preview_image')
+                                <div class="text-danger">Это поле необходимо для заполнения</div>
+                                @enderror
                             </div>
                             <div class="form-group w-50">
                                 <label>Главное изображение</label>
                                 <div class="input-group">
                                     <div class="custom-file">
                                         <input type="file" name="main_image" class="custom-file-input">
-                                        <label class="custom-file-label">Выбрать файл</label>
+                                        <label class="custom-file-label">Изображение не выбрано</label>
                                     </div>
                                     <div class="input-group-append">
                                         <span class="input-group-text">Добавить</span>
                                     </div>
                                 </div>
+                                @error('main_image')
+                                <div class="text-danger">Это поле необходимо для заполнения</div>
+                                @enderror
+                            </div>
+                            <div class="form-group w-50">
+                                <label for="category">Выберите категорию</label>
+                                <select class="form-control" id="category" name="category_id">
+                                    @foreach($categories as $category)
+                                        <option
+                                            {{ $category->id == old('category_id') ? ' selected' : '' }}
+                                            value="{{ $category->id }}">{{ $category->title }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="form-group">
                                 <input type="submit" value="Добавить" class="btn btn-primary">
