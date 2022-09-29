@@ -84,4 +84,8 @@ php artisan make:migration add_soft_deletes_for_users_table
 
 php artisan make:migration add_column_role_to_users_table
 
+## Laravel создание Блога 26. Создаем Middleware для админки и auth middleware, делаем кнопку выхода
+
+php artisan make:middleware AdminMiddleware
+
 
