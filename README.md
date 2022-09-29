@@ -61,4 +61,6 @@ artisan make:migration add_columns_for_images_to_posts_table
 
 ## Laravel создание Блога 17. Добавляем возможность привязывать пост к категории
 
+## Laravel создание Блога 18. Добавляем возможность привязывать тэги
+
 
