@@ -80,4 +80,8 @@ php artisan storage:link<br>
 
 php artisan make:migration add_soft_deletes_for_users_table
 
+## Laravel создание Блога 25. Внедряем роли для пользователей и улучшаем валидацию для апдейта
+
+php artisan make:migration add_column_role_to_users_table
+
 
