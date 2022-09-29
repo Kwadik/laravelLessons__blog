@@ -41,6 +41,7 @@ Route::group([
         Route::get('/', 'IndexController')->name('admin.category.index');
         Route::get('/create', 'CreateController')->name('admin.category.create');
         Route::get('/{category}', 'ShowController')->name('admin.category.show');
+        Route::get('/{category}/edit', 'EditController')->name('admin.category.edit');
         Route::post('/', 'StoreController')->name('admin.category.store');
     });
 });
