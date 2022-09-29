@@ -55,4 +55,8 @@ php artisan make:migration add_column_soft_deletes_to_tags_table
 
 ## Laravel создание Блога 15. Добавляем атрибут content для поста, визуальный редактор Summernote
 
+## Laravel создание Блога 16. Добавляем атрибуты для загрузки изображений
+
+artisan make:migration add_columns_for_images_to_posts_table
+
 

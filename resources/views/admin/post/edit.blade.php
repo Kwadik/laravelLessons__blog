@@ -29,7 +29,7 @@
                             @csrf
                             @method('PATCH')
                             <div class="form-group">
-                                <input type="text" name="title" class="form-control" id="exampleInputEmail1" value="{{ $post->title }}" placeholder="название поста">
+                                <input type="text" name="title" class="form-control" value="{{ $post->title }}" placeholder="название поста">
                                 @error('title')
                                 <div class="text-danger">Это поле необходимо для заполнения</div>
                                 @enderror
