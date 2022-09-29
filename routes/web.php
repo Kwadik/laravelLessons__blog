@@ -43,6 +43,7 @@ Route::group([
         Route::get('/{category}', 'ShowController')->name('admin.category.show');
         Route::get('/{category}/edit', 'EditController')->name('admin.category.edit');
         Route::post('/', 'StoreController')->name('admin.category.store');
+        Route::patch('/{category}', 'UpdateController')->name('admin.category.update');
     });
 });
 
