@@ -7,7 +7,7 @@ use App\Http\Requests\Admin\Category\StoreRequest;
 use App\Http\Requests\Admin\Category\UpdateRequest;
 use App\Models\Category;
 
-class UpdateController extends Controller
+class DeleteController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -15,11 +15,10 @@ class UpdateController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function __invoke(UpdateRequest $request, Category $category)
+    public function __invoke(Category $category)
     {
-        $data = $request->validated();
-        $category->update($data);
+        $category->delete();
 
-        return redirect()->route('admin.category.show', compact('category'));
+        return redirect()->route('admin.category.index');
     }
 }
