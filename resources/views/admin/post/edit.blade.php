@@ -34,7 +34,15 @@
                                 <div class="text-danger">Это поле необходимо для заполнения</div>
                                 @enderror
                             </div>
-                            <input type="submit" value="Обновить" class="btn btn-primary">
+                            <div class="form-group">
+                                <textarea id="summernote" name="content">{{ $post->content }}</textarea>
+                                @error('title')
+                                <div class="text-danger">Это поле необходимо для заполнения</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Обновить" class="btn btn-primary">
+                            </div>
                         </form>
                     </div>
                 </div>
