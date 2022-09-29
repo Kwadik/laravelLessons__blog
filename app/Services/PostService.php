@@ -17,14 +17,18 @@ class PostService
 
             Db::beginTransaction();
 
-            $tagIDs = $data['tag_ids'];
-            unset($data['tag_ids']);
+            if (isset($data['tag_ids'])) {
+                $tagIDs = $data['tag_ids'];
+                unset($data['tag_ids']);
+            }
 
             $data['preview_image'] = Storage::disk('public')->put('/images', $data['preview_image']);
             $data['main_image'] = Storage::disk('public')->put('/images', $data['main_image']);
 
             $post = Post::firstOrCreate($data);
-            $post->tags()->attach($tagIDs);
+            if (isset($tagIDs)) {
+                $post->tags()->attach($tagIDs);
+            }
 
             Db::commit();
 
@@ -42,8 +46,10 @@ class PostService
 
             Db::beginTransaction();
 
-            $tagIDs = $data['tag_ids'];
-            unset($data['tag_ids']);
+            if (isset($data['tag_ids'])) {
+                $tagIDs = $data['tag_ids'];
+                unset($data['tag_ids']);
+            }
 
             if (isset($data['preview_image'])) {
                 $data['preview_image'] = Storage::disk('public')->put('/images', $data['preview_image']);
@@ -53,7 +59,9 @@ class PostService
             }
 
             $post->update($data);
-            $post->tags()->sync($tagIDs);
+            if (isset($tagIDs)) {
+                $post->tags()->sync($tagIDs);
+            }
 
             Db::commit();
 
