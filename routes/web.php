@@ -36,7 +36,7 @@ Route::group([
         'namespace' => 'Main',
     ], function () {
 
-        Route::get('/', 'IndexController');
+        Route::get('/', 'IndexController')->name('admin.main.index');
     });
 
     Route::group([

@@ -114,4 +114,6 @@ php artisan queue:table (команда запуска готовой очере
 
 php artisan make:job StoreUserJob
 
+## Laravel создание Блога 31. Делаем общие косметические изменения по дизайну и редиректам
+
 
