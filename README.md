@@ -93,3 +93,7 @@ php artisan make:middleware AdminMiddleware
 php artisan make:mail User/PasswordMail -m mail.user.password
 
 Отправку письма протестировал на своем ящике, в .env задал настройки smtp
+
+## Laravel создание Блога 28. Отправление письма с подтверждением учетной записи Email verification
+
+

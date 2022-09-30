@@ -28,6 +28,7 @@ Route::group([
     'middleware' => [
         'auth',
         'admin',
+        'verified',
     ],
 ], function () {
 
@@ -95,4 +96,4 @@ Route::group([
     });
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
