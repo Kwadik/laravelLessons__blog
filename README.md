@@ -110,4 +110,8 @@ php artisan make:notification SendVerifyWithQueueNotification
 
 php artisan queue:table (команда запуска готовой очереди)
 
+## Laravel создание Блога 30. Создаем класс Job. Пример работы с очередями любого алгоритма/действия
+
+php artisan make:job StoreUserJob
+
 
