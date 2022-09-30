@@ -88,4 +88,8 @@ php artisan make:migration add_column_role_to_users_table
 
 php artisan make:middleware AdminMiddleware
 
+## Laravel создание Блога 27. Автогенерация пароля, отправка почты. Mailtrap и класс Mailable в Laravel
 
+php artisan make:mail User/PasswordMail -m mail.user.password
+
+Отправку письма протестировал на своем ящике, в .env задал настройки smtp
