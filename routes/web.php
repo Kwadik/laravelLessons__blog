@@ -23,6 +23,37 @@ Route::group([
 });
 
 Route::group([
+    'namespace' => 'App\Http\Controllers\Personal',
+    'prefix' => 'personal',
+    'middleware' => [
+        'auth',
+        'verified',
+    ],
+], function () {
+
+    Route::group([
+        'namespace' => 'Main',
+    ], function () {
+
+        Route::get('/', 'IndexController')->name('personal.main.index');
+    });
+
+    Route::group([
+        'namespace' => 'Liked',
+    ], function () {
+
+        Route::get('/liked', 'IndexController')->name('personal.liked.index');
+    });
+
+    Route::group([
+        'namespace' => 'Comment',
+    ], function () {
+
+        Route::get('/comment', 'IndexController')->name('personal.comment.index');
+    });
+});
+
+Route::group([
     'namespace' => 'App\Http\Controllers\Admin',
     'prefix' => 'admin',
     'middleware' => [
