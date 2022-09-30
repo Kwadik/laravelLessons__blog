@@ -17,7 +17,7 @@ class IndexController extends Controller
     {
         $data = [
             'likedCount' => auth()->user()->likedPosts->count(),
-            //'commentsCount' => Tag::all()->count(),
+            'commentsCount' => auth()->user()->comments->count(),
         ];
 
         return view('personal.main.index', compact('data'));

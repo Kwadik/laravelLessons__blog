@@ -122,4 +122,8 @@ php artisan make:job StoreUserJob
 
 php artisan make:model PostUserLike -m
 
+## Laravel создание Блога 34. Структура в бд для комментариев и их отображение в личном кабинете
+
+php artisan make:model Comment -m
+
 

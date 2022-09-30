@@ -42,7 +42,7 @@
                         <!-- small box -->
                         <div class="small-box bg-success">
                             <div class="inner">
-                                <h3>10</h3>
+                                <h3>{{ $data['commentsCount'] }}</h3>
 
                                 <p>Комментарии</p>
                             </div>
