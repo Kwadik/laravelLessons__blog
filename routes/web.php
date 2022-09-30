@@ -43,6 +43,7 @@ Route::group([
     ], function () {
 
         Route::get('/liked', 'IndexController')->name('personal.liked.index');
+        Route::delete('/liked/{post}', 'DeleteController')->name('personal.liked.delete');
     });
 
     Route::group([

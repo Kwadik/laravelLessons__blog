@@ -24,11 +24,6 @@ class User extends Authenticatable implements MustVerifyEmail
         ];
     }
 
-    public function sendEmailVerificationNotification() {
-
-        $this->notify(new SendVerifyWithQueueNotification());
-    }
-
     /**
      * The attributes that are mass assignable.
      *
@@ -55,4 +50,14 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function sendEmailVerificationNotification() {
+
+        $this->notify(new SendVerifyWithQueueNotification());
+    }
+
+    public function likedPosts() {
+
+        return $this->belongsToMany(Post::class, 'post_user_likes', 'user_id', 'post_id');
+    }
 }

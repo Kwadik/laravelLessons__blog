@@ -118,4 +118,8 @@ php artisan make:job StoreUserJob
 
 ## Laravel создание Блога 32. Создаем личный кабинет пользователя
 
+## Laravel создание Блога 33. Структура в бд для лайков и их отображение в личном кабинете
+
+php artisan make:model PostUserLike -m
+
 

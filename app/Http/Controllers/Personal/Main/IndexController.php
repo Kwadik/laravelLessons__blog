@@ -15,12 +15,11 @@ class IndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        /*$data = [
-            'likesCount' => User::all()->count(),
-            'commentsCount' => Tag::all()->count(),
-        ];*/
+        $data = [
+            'likedCount' => auth()->user()->likedPosts->count(),
+            //'commentsCount' => Tag::all()->count(),
+        ];
 
-        return view('personal.main.index');
-        //return view('personal.main.index', compact('data'));
+        return view('personal.main.index', compact('data'));
     }
 }

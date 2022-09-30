@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Personal\Liked;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\Post;
 
-class IndexController extends Controller
+class DeleteController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -13,10 +13,10 @@ class IndexController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response|string
      */
-    public function __invoke(Request $request)
+    public function __invoke(Post $post)
     {
-        $posts = auth()->user()->likedPosts;
+        auth()->user()->likedPosts()->detach($post->id);
 
-        return view('personal.liked.index', compact('posts'));
+        return redirect(route('personal.liked.index'));
     }
 }
