@@ -26,7 +26,6 @@
                         <i class="nav-icon far fa-clipboard"></i>
                         <p>
                             Посты
-                            <span class="badge badge-info right">2</span>
                         </p>
                     </a>
                 </li>
@@ -35,7 +34,6 @@
                         <i class="nav-icon fas fa-users"></i>
                         <p>
                             Пользователи
-                            <span class="badge badge-info right">2</span>
                         </p>
                     </a>
                 </li>
@@ -44,7 +42,6 @@
                         <i class="nav-icon fas fa-th-list"></i>
                         <p>
                             Категории
-                            <span class="badge badge-info right">2</span>
                         </p>
                     </a>
                 </li>
@@ -53,7 +50,6 @@
                         <i class="nav-icon fas fa-tags"></i>
                         <p>
                             Теги
-                            <span class="badge badge-info right">2</span>
                         </p>
                     </a>
                 </li>
