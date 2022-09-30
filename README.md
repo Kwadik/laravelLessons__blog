@@ -96,4 +96,18 @@ php artisan make:mail User/PasswordMail -m mail.user.password
 
 ## Laravel создание Блога 28. Отправление письма с подтверждением учетной записи Email verification
 
+## Laravel создание Блога 29. Отправка писем с использованием очередей. Создаем свой Notification класс
+
+php artisan queue:table
+
+php artisan migrate
+
+php artisan make:notification SendVerifyWithQueueNotification
+
+.env QUEUE_CONNECTION=database
+
+.env APP_URL=http://127.0.0.1:8000/ (уточнение урла для корректных ссылок в письме)
+
+php artisan queue:table (команда запуска готовой очереди)
+
 
