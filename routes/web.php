@@ -19,7 +19,7 @@ Route::group([
     'namespace' => 'App\Http\Controllers\Main',
 ], function () {
 
-    Route::get('/', 'IndexController');
+    Route::get('/', 'IndexController')->name('main.index');
 });
 
 Route::group([
@@ -109,6 +109,7 @@ Route::group([
     ], function () {
 
         Route::get('/', 'IndexController')->name('admin.post.index');
+        //Route::get('/featured', 'IndexController')->name('admin.post.featured');
         Route::get('/create', 'CreateController')->name('admin.post.create');
         Route::get('/{post}', 'ShowController')->name('admin.post.show');
         Route::get('/{post}/edit', 'EditController')->name('admin.post.edit');

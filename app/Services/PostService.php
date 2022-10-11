@@ -25,6 +25,8 @@ class PostService
             $data['preview_image'] = Storage::disk('public')->put('/images', $data['preview_image']);
             $data['main_image'] = Storage::disk('public')->put('/images', $data['main_image']);
 
+            $data['is_featured'] = intval(isset($data['is_featured']));
+
             $post = Post::firstOrCreate($data);
             if (isset($tagIDs)) {
                 $post->tags()->attach($tagIDs);
@@ -38,6 +40,8 @@ class PostService
 
             return $exception->getMessage();
         }
+
+        return $post;
     }
 
     public function update(Post $post, $data) {
@@ -57,6 +61,8 @@ class PostService
             if (isset($data['main_image'])) {
                 $data['main_image'] = Storage::disk('public')->put('/images', $data['main_image']);
             }
+
+            $data['is_featured'] = intval(isset($data['is_featured']));
 
             $post->update($data);
             if (isset($tagIDs)) {

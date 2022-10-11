@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Post;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Builder;
 
 class IndexController extends BaseController
 {
@@ -15,7 +16,7 @@ class IndexController extends BaseController
      */
     public function __invoke(Request $request)
     {
-        $posts = Post::all();
+        $posts = array_key_exists('featured', $request->toArray()) ? Post::where('is_featured', '1')->get() : Post::all();
         return view('admin.post.index', compact('posts'));
     }
 }

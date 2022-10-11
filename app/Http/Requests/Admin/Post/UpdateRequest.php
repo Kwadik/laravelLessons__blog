@@ -29,6 +29,7 @@ class UpdateRequest extends FormRequest
             'main_image' => 'nullable|file',
             'preview_image' => 'nullable|file',
             'category_id' => 'required|integer|exists:categories,id',
+            'is_featured' => '',
             'tag_ids' => 'nullable|array',
             'tag_ids.*' => 'nullable|integer|exists:tags,id',
         ];

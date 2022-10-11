@@ -108,7 +108,7 @@ php artisan make:notification SendVerifyWithQueueNotification
 
 .env APP_URL=http://127.0.0.1:8000/ (уточнение урла для корректных ссылок в письме)
 
-php artisan queue:table (команда запуска готовой очереди)
+php artisan queue:work (команда запуска готовой очереди)
 
 ## Laravel создание Блога 30. Создаем класс Job. Пример работы с очередями любого алгоритма/действия
 
@@ -125,5 +125,11 @@ php artisan make:model PostUserLike -m
 ## Laravel создание Блога 34. Структура в бд для комментариев и их отображение в личном кабинете
 
 php artisan make:model Comment -m
+
+## Laravel создание Блога 35. Вывод ленты постов. Случайные посты. Популярные посты. Пагинация
+
+php artisan make:migration add_column_is_featured_to_posts_table
+
+php artisan vendor:publish --tag=laravel-pagination
 
 

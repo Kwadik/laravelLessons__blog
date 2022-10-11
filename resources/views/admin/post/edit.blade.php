@@ -41,6 +41,12 @@
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="is_featured" id="is_featured"
+                                    {{ intval($post->is_featured) ? ' checked' : '' }}
+                                >
+                                <label class="form-check-label" for="is_featured">Отобразить в топе на главной</label>
+                            </div>
                             <div class="form-group w-50">
                                 <label>Превью</label>
                                 <div class="w-50">
